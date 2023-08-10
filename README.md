@@ -1,3 +1,3 @@
-# Tomás Malamud - Portfolio
+# Tomás Malamud's Portfolio
 
-This portfolio is built from Portfolio Starter Kit template, it uses **Next.js** and a library called [Nextra](https://nextra.vercel.app/). It is hosted on [Vercel](https://vercel.com/).
+Portfolio built from a template with Next.js 13 app dir, Contentlayer, Tailwind CSS and dark mode.

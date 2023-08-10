@@ -1,25 +1,31 @@
 {
+  "name": "next-contentlayer",
+  "version": "0.1.0",
   "private": true,
-  "license": "MIT",
   "scripts": {
-    "dev": "next",
-    "build": "node ./scripts/gen-rss.js && next build",
-    "start": "next start"
+    "dev": "next dev",
+    "build": "next build",
+    "preview": "next build && next start",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
-    "gray-matter": "^4.0.2",
-    "next": "12.0.8",
-    "nextra": "^2.0.0-beta.5",
-    "nextra-theme-blog": "^2.0.0-beta.5",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "rss": "^1.2.2"
-  },
-  "prettier": {
-    "arrowParens": "always",
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "none",
-    "semi": false
+    "@tailwindcss/typography": "^0.5.9",
+    "@types/node": "18.16.1",
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.1",
+    "@vercel/analytics": "^1.0.0",
+    "autoprefixer": "10.4.14",
+    "contentlayer": "^0.3.2",
+    "eslint": "8.39.0",
+    "eslint-config-next": "13.3.1",
+    "next": "13.4.1",
+    "next-contentlayer": "^0.3.2",
+    "next-themes": "^0.2.1",
+    "postcss": "8.4.23",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "tailwindcss": "3.3.2",
+    "typescript": "5.0.4"
   }
 }
