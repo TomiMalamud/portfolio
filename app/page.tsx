@@ -30,16 +30,17 @@ export default function Home() {
           As you can probably tell, this website is still a work in progress.
         </p>
       </div>
-      {/* 
+      <hr/>
+      <h2>Projects</h2>
       {allPosts.map((post) => (
         <article key={post._id}>
           <Link href={post.slug}>
-            <h2>{post.title}</h2>
+            <h3 className="-mb-2 decoration-slate-600 hover:decoration-slate-300 underline-offset-8">{post.title}</h3>
           </Link>
           {post.description && <p>{post.description}</p>}
         </article>
       ))}
-      */}
+      <p>👉 I have at least 3 more projects to showcase and I'm working on their presentations.</p>
     </div>
   );
 }

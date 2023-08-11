@@ -64,7 +64,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </header>
             <main>{children}</main>
             <footer>
-            <div className="prose dark:prose-invert">
+            <div className="prose dark:prose-invert mt-8">
               <hr />
               <ul>
                 <li>

@@ -5,5 +5,5 @@
 
 @layer base {
     a {
-      @apply underline-offset-4 hover:opacity-80;
+      @apply decoration-slate-600 hover:decoration-slate-300 underline-offset-4;
     }}
