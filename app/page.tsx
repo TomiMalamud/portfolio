@@ -12,7 +12,7 @@ export default function Home() {
           tech industry.
         </p>
       </div>
-      <a href="https://drive.google.com/file/d/1fZ5_eronOlo369nEZZSMVUUUetw_gReT/view?usp=sharing" target="_blank">Check out my resume</a>
+      <Link href="/resume.pdf" target="_blank">Check out my resume</Link>
       <div className="mt-8">
         <p>
           As you can probably tell, this website is still a work in progress.
