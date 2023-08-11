@@ -35,7 +35,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   </Link>
                 </span>
                 <nav className="flex text-sm font-medium space-x-4 items-center">
-                <Link
+                  <Link
                     href="/about"
                     className=" hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -mr-2 transition-[background-color]"
                   >
@@ -63,7 +63,41 @@ export default function RootLayout({ children }: RootLayoutProps) {
               </div>
             </header>
             <main>{children}</main>
+            <footer>
+            <div className="prose dark:prose-invert">
+              <hr />
+              <ul>
+                <li>
+                  GitHub{" "}
+                  <a
+                    className=""
+                    href="https://github.com/TomiMalamud"
+                    target="_blank"
+                  >
+                    @TomiMalamud
+                  </a>
+                </li>
+                <li>
+                  LinkedIn{" "}
+                  <a
+                    href="https://www.linkedin.com/in/tomas-malamud/"
+                    target="_blank"
+                  >
+                    Tomás Malamud
+                  </a>
+                </li>
+                <li>
+                  Email{" "}
+                  <a href="mailto:tomasmalamud@gmail.com" target="_blank">
+                    tomasmalamud@gmail.com
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </footer>
+
           </div>
+
           <Analytics />
         </ThemeProvider>
       </body>

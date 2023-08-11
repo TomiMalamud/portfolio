@@ -1,37 +1,35 @@
 import { allPosts } from "@/.contentlayer/generated";
 import Link from "next/link";
-
+import Image from "next/image";
 export default function Home() {
   return (
     <div className="prose dark:prose-invert">
-      <div className="mt-8">
-        <p>
+      <div className="flex flex-col sm:flex-row-reverse items-start sm:mt-8">
+        <div className=" w-full sm:-ml-8">
+          <Image
+            src="/tomasmalamud.jpg"
+            className="rounded-full bg-gray-100 float-left sm:float-right block mx-auto sm:mx-0 border border-gray-300 dark:border-gray-700"
+            width={100}
+            height={100}
+            alt="Picture of Tomás Malamud"
+          />
+        </div>
+        <p className="mt-0 sm:mt-5">
           Hi, I'm a Systems Engineering student (graduating in 2025) and
           entrepreneur. I'm from Villa Carlos Paz, Córdoba, Argentina. Currently
           managing a co-founded business, and looking for a transition into the
           tech industry.
         </p>
       </div>
-      <Link href="/resume.pdf" target="_blank">Check out my resume</Link>
+
+      <Link href="/resume.pdf" target="_blank">
+        Check out my resume
+      </Link>
       <div className="mt-8">
         <p>
           As you can probably tell, this website is still a work in progress.
         </p>
       </div>
-      <hr />
-      <ul>
-        <li>
-          GitHub <a className="" href="https://github.com/TomiMalamud" target="_blank">@TomiMalamud</a>
-        </li>
-        <li>
-          Email{" "}
-          <a href="mailto:tomasmalamud@gmail.com" target="_blank">tomasmalamud@gmail.com</a>
-        </li>
-        <li>
-          LinkedIn{" "}
-          <a href="https://www.linkedin.com/in/tomas-malamud/" target="_blank">Tomás Malamud</a>
-        </li>
-      </ul>
       {/* 
       {allPosts.map((post) => (
         <article key={post._id}>
