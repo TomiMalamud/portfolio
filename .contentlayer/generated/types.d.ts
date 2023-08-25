@@ -28,6 +28,7 @@ export type Post = {
   type: 'Post'
   title: string
   description?: string | undefined
+  tags: string[]
   date: IsoDateTimeString
   /** MDX file body */
   body: MDX

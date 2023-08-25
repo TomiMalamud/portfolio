@@ -1,3 +1,5 @@
 # Tomás Malamud's Portfolio
 
-Portfolio built from a template with Next.js 13 app dir, Contentlayer, Tailwind CSS and dark mode.
+Portfolio built on top of a shadcn template with Next.js 13 App Router, [Contentlayer](https://contentlayer.dev), Tailwind CSS and dark mode.
+
+Here I share my projects, articles and other stuff about me. 

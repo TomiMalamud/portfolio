@@ -40,6 +40,7 @@ export const Post = defineDocumentType(() => ({
     description: {
       type: "string",
     },
+    tags: { type: 'list', of: { type: 'string' }, default: [] },
     date: {
       type: "date",
       required: true,
