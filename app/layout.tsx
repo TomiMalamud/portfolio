@@ -8,7 +8,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Tomás Malamud",
-  description: "Here you will find my portfolio and resume."
+  description: "Here you will find some things about me."
 };
 
 interface RootLayoutProps {
@@ -39,6 +39,12 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     className=" hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -mr-2 transition-[background-color]"
                   >
                     About
+                  </Link>
+                  <Link
+                    href="/reading-list"
+                    className=" hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -mr-2 transition-[background-color]"
+                  >
+                    Reading
                   </Link>
                   <a
                     href="https://github.com/TomiMalamud"
