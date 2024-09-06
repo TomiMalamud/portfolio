@@ -3,44 +3,21 @@ title: Logistics App
 description: Improved logistics management for ROHI Sommiers.
 date: "2023-01-02"
 ---
+[Source code](https://github.com/TomiMalamud/logistics)
 
-A project built with cutting-edge web development technologies:
+This app was developed for [ROHI Sommiers](https://rohisommiers.com/), a mattress company, to optimize their delivery processes. It is like a to-do list for the delivery and sales teams with unique features:
 
-<Badge variant="vercel" />, a frontend cloud platform. I've also used **Vercel Postgres** to store the data.
+![Home](/all.png)
 
-<Badge variant="next" />, an open-source web framework built with <Badge variant="react" />.
+- Integrated Google Maps API for quick address searches
+- One-click navigation for the delivery team
+- Simplified task management for sales and delivery operations
 
-<Badge variant="prisma" /> an ORM to work with databases in an efficient way.
- 
-Other technologies like [Auth0](https://auth0.com)'s Universal Login, [ShadcnUI](https://ui.shadcn.com) UI components and [TailwindCSS](https://tailwindcss.com) helped me to develop this project.
+The app significantly reduces the time needed to locate customer addresses and keep track of deliveries. With just a click on the address, the delivery team is directed to the exact location.
 
-[The source code is available on GitHub](https://github.com/TomiMalamud/logistics)
-
----
-## Logistics Management App for Internal Use
-
-This full-stack app is built to simplify mattress deliveries, streamlining the process for the sales and operations teams. The whole point is to eliminate inefficiencies, making logistics easier for everyone involved. Selected for its ease of maintenance and scalability, the tech stack also ensures that the app isn't just fast—it's optimally built for low latency and high reliability.
-
-### Essential Features
-
-- **Copy Address**: A one-click feature for copying the delivery address, reducing errors and speeding up the process.
-  
-- **Customer Communication**: Employees can call or text customers directly from within the app, streamlining communication.
-
-- **Note Handling**: Allows the addition and updating of delivery notes.
-
-- **Tasks Creation**: Simplified process for generating new tasks. 
-
-### Operational Impact. <span className="text-gray-500 dark:text-gray-400">Business Benefits </span>
-
-The app provides a straightforward solution for logistics management. Features like easy communication and delivery tracking enhance operational efficiency. It's a key tool used by [ROHI Sommiers](https://rohisommiers.com) to manage their deliveries effectively.
-
-## Visuals
-
-<div className="flex space-x-8 -mt-10">
-  ![Main View](/all.JPG)
-  _Customer data shown is modified for privacy._
-
-  ![New Task Page](/add.JPG)
-  _Add a new delivery task easily._
-</div>
+## Stack
+- [Next.js](https://nextjs.org/) - React framework
+- [Auth0](https://auth0.com) - For authentication
+- [Prisma](https://www.prisma.io/) - TypeScript ORM
+- [Vercel Postgres](https://vercel.com/postgres) - Easy to use Postgres database
+- [shadcn/ui](https://ui.shadcn.com/) - UI components

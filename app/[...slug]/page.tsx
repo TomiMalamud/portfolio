@@ -1,7 +1,7 @@
 import { notFound } from "next/navigation"
 import { Metadata } from "next"
 import { allPages } from "contentlayer/generated"
-
+import Image from "next/image"
 import { Mdx } from "@/components/mdx-components"
 
 interface PageProps {
@@ -50,7 +50,7 @@ export default async function PagePage({ params }: PageProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert mt-4">
+    <article className="py-6 prose dark:prose-invert mt-4">      
       <h1 className="-mb-2">{page.title}</h1>
       {page.description && <p className="text-xl">{page.description}</p>}
       <hr />

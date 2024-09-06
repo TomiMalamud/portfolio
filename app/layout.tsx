@@ -19,7 +19,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-screen bg-white dark:bg-zinc-900 text-slate-900 dark:text-gray-50 ${inter.className}`}
+        className={`antialiased min-h-screen bg-amber-50 dark:bg-zinc-900 text-black dark:text-gray-50 ${inter.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-2xl mx-auto py-10 px-4">
@@ -34,12 +34,6 @@ export default function RootLayout({ children }: RootLayoutProps) {
                   </Link>
                 </span>
                 <nav className="flex text-sm font-medium space-x-4 items-center">
-                  <Link
-                    href="/about"
-                    className=" hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -mr-2 transition-[background-color]"
-                  >
-                    About
-                  </Link>
                   <Link
                     href="/reading-list"
                     className=" hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -mr-2 transition-[background-color]"
