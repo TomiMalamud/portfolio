@@ -12,14 +12,14 @@ I've also published some of the code on [GitHub](https://github.com/TomiMalamud/
 
 ## How It Works
 
-1. **Movie Database**: I built a dataset of over 10,000 movies by combining information from IMDb (movie details, directors, ratings, cast) and TMDB (overviews, taglines, posters, backdrops, keywords).
+1. **Movie Database**: I built a dataset of over 10,000 movies by combining information from IMDb (movie details, directors, ratings, cast) and TMDB (overviews, posters, backdrops, keywords, production countries).
 
-2. **Similarity Calculation**: The app uses a cosine similarity matrix based on genres, cast, directors, and keywords to find similar movies. This matrix is converted to a sparse format for efficient storage and quick access.
+2. **Similarity Calculation**: I used Sentence Transformers to generate embeddings for each movie based on their details. Then, I calculated the cosine similarity between the embeddings with a custom implementation (because sklearn didn't fit in PythonAnywhere's free tier). The similarity matrix is computed on-the-fly, and it's very fast. Embeddings are stored in a numpy array.
 
 3. **Stack**:
    - Frontend: Built with Next.js
    - Backend: Flask server providing endpoints for movie search, recommendations, and movie details
-   - Data Storage: All movie data and similarity information is stored in NumPy arrays
+   - Data: All movie data and similarity information is stored in NumPy arrays
 
 4. **Performance**: The use of sparse matrices and NumPy arrays allows for fast, memory-efficient operation, even with a large dataset.
 
