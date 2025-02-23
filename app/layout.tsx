@@ -1,8 +1,8 @@
+import { ModeToggle } from "@/components/mode-toggle";
+import { ThemeProvider } from "@/components/theme-provider";
+import { Inter } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
-import { Inter } from "next/font/google";
-import { ThemeProvider } from "@/components/theme-provider";
-import { ModeToggle } from "@/components/mode-toggle";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,7 +28,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <span className="text-md md:text-lg whitespace-nowrap font-bold">
                   <Link
                     href="/"
-                    className="hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -ml-2 transition-[background-color]"
+                    className="hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-md -ml-2 transition-[background-color]"
                   >
                     Tomás Malamud
                   </Link>
@@ -36,7 +36,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <nav className="flex text-sm font-medium space-x-4 items-center">
                   <Link
                     href="/reading-list"
-                    className=" hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-sm -mr-2 transition-[background-color]"
+                    className="relative rounded-md w-auto h-8 flex items-center justify-center px-3 hover:bg-gray-200 dark:hover:bg-[#313131] hover:scale-105 transition-all duration-200"
                   >
                     Reading
                   </Link>
@@ -44,7 +44,9 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     href="https://github.com/TomiMalamud"
                     target="_blank"
                     rel="noreferrer"
-                    className="text-sm font-medium hover:opacity-100 transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none ring-offset-background dark:hover:bg-gray-100/20 hover:bg-gray-200/30 rounded-md flex h-7 w-7 items-center justify-center p-0"
+                    className="relative rounded-md w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#313131] hover:scale-105 transition-all duration-200"
+                    aria-label="GitHub Profile"
+                    title="GitHub Profile"
                   >
                     <svg
                       viewBox="0 0 438.549 438.549"
@@ -63,39 +65,62 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </header>
             <main>{children}</main>
             <footer>
-            <div className="prose dark:prose-invert mt-8">
-              <hr />
-              <ul>
-                <li>
-                  GitHub{" "}
-                  <a
-                    className=""
-                    href="https://github.com/TomiMalamud"
-                    target="_blank"
-                  >
-                    @TomiMalamud
-                  </a>
-                </li>
-                <li>
-                  LinkedIn{" "}
-                  <a
-                    href="https://www.linkedin.com/in/tomas-malamud/"
-                    target="_blank"
-                  >
-                    Tomás Malamud
-                  </a>
-                </li>
-                <li>
-                  Email{" "}
-                  <a href="mailto:tomasmalamud@gmail.com" target="_blank">
-                    tomasmalamud@gmail.com
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </footer>
+              <div className="prose dark:prose-invert mt-8">
+                <hr />
+                <ul>
+                  <li>
+                    GitHub{" "}
+                    <a
+                      className=""
+                      href="https://github.com/TomiMalamud"
+                      target="_blank"
+                    >
+                      @TomiMalamud
+                    </a>
+                  </li>
+                  <li>
+                    LinkedIn{" "}
+                    <a
+                      href="https://www.linkedin.com/in/tomas-malamud/"
+                      target="_blank"
+                    >
+                      Tomás Malamud
+                    </a>
+                  </li>
+                  <li>
+                    Email{" "}
+                    <a href="mailto:tomasmalamud@gmail.com" target="_blank">
+                      tomasmalamud@gmail.com
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </footer>
           </div>
         </ThemeProvider>
+        <svg style={{ position: 'absolute', width: 0, height: 0 }}>
+          <defs>
+            <filter id="circles">
+              <feGaussianBlur stdDeviation="1" />
+              <feColorMatrix
+                type="matrix"
+                values="1 0 0 0 0
+                        1 0 0 0 0
+                        1 0 0 0 0
+                        1 0 0 0 1"
+              />
+              <feComponentTransfer>
+                <feFuncR type="discrete" tableValues="0 1"/>
+                <feFuncG type="discrete" tableValues="0 1"/>
+                <feFuncB type="discrete" tableValues="0 1"/>
+              </feComponentTransfer>
+              <feTurbulence type="turbulence" baseFrequency="0.7" numOctaves="1" result="turbulence"/>
+              <feDisplacementMap in2="turbulence" in="SourceGraphic" scale="15" />
+              <feMorphology operator="dilate" radius="2" />
+              <feMorphology operator="erode" radius="2" />
+            </filter>
+          </defs>
+        </svg>
       </body>
     </html>
   );
