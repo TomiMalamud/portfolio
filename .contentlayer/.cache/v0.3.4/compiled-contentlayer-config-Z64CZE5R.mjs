@@ -37,6 +37,9 @@ var Post = defineDocumentType(() => ({
     description: {
       type: "string"
     },
+    author: {
+      type: "string"
+    },
     tags: { type: "list", of: { type: "string" }, default: [] },
     date: {
       type: "date",
@@ -54,4 +57,4 @@ export {
   Post,
   contentlayer_config_default as default
 };
-//# sourceMappingURL=compiled-contentlayer-config-DGFGZXL6.mjs.map
+//# sourceMappingURL=compiled-contentlayer-config-Z64CZE5R.mjs.map
