@@ -6,18 +6,33 @@ date: "2025-02-01"
 ---
 [Source code](https://github.com/TomiMalamud/logistics)
 
-This app was developed for [ROHI Sommiers](https://rohisommiers.com/), a mattress company, to optimize their delivery processes. It is like a to-do list for the delivery and sales teams with unique features:
-
 ![Home](/all.png)
 
-- Integrated with the company's ERP system to fetch sales and delivery data.
-- One-click navigation for the delivery team
-- Simplified task management for sales and delivery operations
+**ROHI Sommiers** is a mattress retailer with three stores and an e-commerce platform. Most orders are delivered to customers' homes, requiring coordination for mattress pickups from suppliers' factories and ensuring stores are properly stocked while keeping the ERP's recorded inventory accurate.
 
-It optimizes the delivery process by providing the delivery team with a list of tasks, including the delivery address, contact information, and a one-click navigation button to open Google Maps with the delivery address.
-It is integrated with the company's ERP system, which includes sales, products and delivery data.
+Previously, operations relied on disorganized shared Google Sheets, leading to inefficiencies, lost employee time, frequent customer complaints, and unnecessary overpayments to outsourced carriers handling deliveries.
 
-## Stack
-- [Next.js](https://nextjs.org/) - React framework
-- [Supabase](https://supabase.com/) - Postgres database and Auth
-- [shadcn/ui](https://ui.shadcn.com/) - UI components
+This new, lean solution significantly streamlined operations by:  
+- Synchronizing manufacturing orders and supplier balances with ERP data.  
+- Implementing role-based access control, ensuring employees only access relevant information, with restricted interactions and activity logs.  
+- Tracking sales targets and bonuses per employee.  
+- Optimizing home deliveries and in-store pickups.  
+- Accurately tracking mattress pickups to prevent overcharges from carriers.  
+- Properly reflecting internal stock movements between stores in the ERP.  
+- Storing a database for carriers.  
+- Managing product pricing, discounts, and financing.  
+- Tracking manufacturing orders and their balances, with direct communication with suppliers.
+
+## Results  
+- **50% reduction** in operational costs related to deliveries, manufacturing orders, suppliers, and carriers.  
+- **2x increase** in the ratio of 5-star reviews to sales.  
+- **90% decrease** in operational errors.
+
+## Stack  
+- Next.js for frontend and backend  
+- Supabase (PostgreSQL) for authentication, database, and storage  
+- Vercel for deployment
+
+![Orders](/orders.png)
+![Targets](/targets.png)
+![Calendar](/calendar.png)

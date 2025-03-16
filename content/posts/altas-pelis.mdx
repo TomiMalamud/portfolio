@@ -5,14 +5,18 @@ author: "Tomás Malamud"
 date: "2024-09-01"
 ---
 
-**Check it out here: [Altas Pelis](https://altaspelis.com/)**  
+**Check it out here: [Altas Pelis](https://altaspelis.com/)**
 
-Altas Pelis is a content-based movie recommender system that uses Sentence Transformers to generate embeddings for each movie based on its details. It computes the cosine similarity matrix on-the-fly for each movie, and it does so very fast!  
+![Altas Pelis](/altaspelis.png)
 
-I've also published some of the code on [GitHub](https://github.com/TomiMalamud/altaspelis).  
+Altas Pelis is a content-based **movie recommendation system** designed to find movies similar to the user's favorites. It uses Sentence Transformers to generate embeddings for each movie based on its details and calculates cosine similarity on the fly for recommendations.
 
-Altas Pelis is a content-based movie recommendation system designed to find movies similar to the user's favorites. It uses Sentence Transformers to generate embeddings for each movie based on its details and calculates cosine similarity on-the-fly for recommendations.
+It also shows **where to watch** the movie! (for Argentina)
 
-The dataset includes over 10,000 movies, combining data from IMDb (directors, ratings, cast) and TMDB (overviews, posters, backdrops, keywords, production countries). Embeddings are stored as NumPy arrays; it is a very simple yet effective system.  
+The dataset includes over 10,000 movies, combining data from IMDb (directors, ratings, cast) and TMDB (overviews, posters, backdrops, keywords, production countries).
 
-The system is built with Next.js for the frontend and Flask for the backend, which provides endpoints for search, recommendations, and movie details.  
+It was a lot of fun to build. I stored the embeddings of the movies' data in a .npy file (a NumPy array, very simple), and that’s essentially how it recommends movies—by computing cosine similarity when you select a movie.
+
+The system is built with Next.js for the frontend and Flask for the backend, which provides endpoints for search, recommendations, and movie details.
+
+I've published the code on [GitHub](https://github.com/TomiMalamud/altaspelis).
