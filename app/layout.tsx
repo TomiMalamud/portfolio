@@ -2,6 +2,7 @@ import { ModeToggle } from "@/components/mode-toggle";
 import { ThemeProvider } from "@/components/theme-provider";
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -9,6 +10,23 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "Tomás Malamud",
   description: "Here you will find some things about me.",
+  icons: {
+    icon: "/favicon.ico",
+  },
+  openGraph: {
+    images: [
+      {
+        url: "/tomasmalamud.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Tomás Malamud",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    images: ["/tomasmalamud.jpg"],
+  },
 };
 
 interface RootLayoutProps {
@@ -136,6 +154,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </filter>
           </defs>
         </svg>
+        <Analytics />
       </body>
     </html>
   );
