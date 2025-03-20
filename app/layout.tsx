@@ -1,19 +1,18 @@
 import { ModeToggle } from "@/components/mode-toggle";
 import { ThemeProvider } from "@/components/theme-provider";
-import { Inter } from "next/font/google";
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { GeistSans } from "geist/font/sans";
 import Link from "next/link";
-import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Tomás Malamud",
-  description: "Here you will find some things about me.",
-  icons: {
-    icon: "/favicon.ico",
-  },
+  metadataBase: new URL("https://tmalamud.com"),
+  description: "Some things about me.",
   openGraph: {
+    title: "Tomás Malamud",
+    description: "Some things about me.",
+    siteName: "Tomás Malamud",
     images: [
       {
         url: "/tomasmalamud.jpg",
@@ -25,7 +24,13 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
+    title: "Tomás Malamud",
+    description: "Some things about me.",
     images: ["/tomasmalamud.jpg"],
+    creator: "@tomasmalamud",
+  },
+  icons: {
+    icon: "/favicon.ico",
   },
 };
 
@@ -37,7 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-screen bg-white dark:bg-zinc-900 text-black dark:text-gray-50 ${inter.className}`}
+        className={`antialiased min-h-screen bg-white dark:bg-zinc-900 text-black dark:text-gray-50 ${GeistSans.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-2xl mx-auto py-10 px-4">
@@ -122,39 +127,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
             </footer>
           </div>
         </ThemeProvider>
-        <svg style={{ position: "absolute", width: 0, height: 0 }}>
-          <defs>
-            <filter id="circles">
-              <feGaussianBlur stdDeviation="1" />
-              <feColorMatrix
-                type="matrix"
-                values="1 0 0 0 0
-                        1 0 0 0 0
-                        1 0 0 0 0
-                        1 0 0 0 1"
-              />
-              <feComponentTransfer>
-                <feFuncR type="discrete" tableValues="0 1" />
-                <feFuncG type="discrete" tableValues="0 1" />
-                <feFuncB type="discrete" tableValues="0 1" />
-              </feComponentTransfer>
-              <feTurbulence
-                type="turbulence"
-                baseFrequency="0.7"
-                numOctaves="1"
-                result="turbulence"
-              />
-              <feDisplacementMap
-                in2="turbulence"
-                in="SourceGraphic"
-                scale="15"
-              />
-              <feMorphology operator="dilate" radius="2" />
-              <feMorphology operator="erode" radius="2" />
-            </filter>
-          </defs>
-        </svg>
-        <Analytics />
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || "G-XXXXXXXXXX"} />
       </body>
     </html>
   );
