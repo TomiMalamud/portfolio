@@ -31,7 +31,7 @@ export default function Home() {
         .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
         .map((post) => (
           <article key={post._id}>
-            <Link href={post.slug} className="no-underline">
+            <Link href={post.slugAsParams === "oms" ? post.slug : post.url ?? post.slug} className="no-underline" target={post.url && post.slugAsParams !== "oms" ? "_blank" : undefined}>
               <h3 className="decoration-slate-600 mb-1 hover:decoration-slate-300 underline underline-offset-8">
                 {post.title}
               </h3>

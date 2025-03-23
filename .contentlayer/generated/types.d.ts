@@ -31,6 +31,7 @@ export type Post = {
   author?: string | undefined
   tags: string[]
   date: IsoDateTimeString
+  url?: string | undefined
   /** MDX file body */
   body: MDX
   slug: string
