@@ -42,7 +42,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body
-        className={`antialiased min-h-screen bg-white dark:bg-zinc-900 text-black dark:text-gray-50 ${GeistSans.className}`}
+        className={`antialiased min-h-screen bg-white dark:bg-neutral-950 text-neutral-950 dark:text-neutral-50 ${GeistSans.className}`}
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <div className="max-w-2xl mx-auto py-10 px-4">
@@ -51,7 +51,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <span className="text-md md:text-lg whitespace-nowrap font-bold">
                   <Link
                     href="/"
-                    className="hover:bg-gray-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-gray-300 dark:active:bg-[#242424] p-2 rounded-md -ml-2 transition-[background-color]"
+                    className="hover:bg-neutral-200 hover:opacity-100 dark:hover:bg-[#313131] active:bg-neutral-300 dark:active:bg-[#242424] p-2 rounded-md -ml-2 transition-[background-color]"
                   >
                     Tomás Malamud
                   </Link>
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                 <nav className="flex text-sm font-medium space-x-4 items-center">
                   <Link
                     href="/reading-list"
-                    className="relative rounded-md w-auto h-8 flex items-center justify-center px-3 hover:bg-gray-200 dark:hover:bg-[#313131] hover:scale-105 transition-all duration-200"
+                    className="relative rounded-md w-auto h-8 flex items-center justify-center px-3 hover:bg-neutral-200 dark:hover:bg-[#313131] transition-all duration-200"
                   >
                     Reading
                   </Link>
@@ -67,7 +67,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
                     href="https://x.com/tomasmalamud"
                     target="_blank"
                     rel="noreferrer"
-                    className="relative rounded-md w-8 h-8 flex items-center justify-center hover:bg-gray-200 dark:hover:bg-[#313131] hover:scale-105 transition-all duration-200"
+                    className="relative rounded-md w-8 h-8 flex items-center justify-center hover:bg-neutral-200 dark:hover:bg-[#313131] transition-all duration-200"
                     aria-label="X Profile"
                     title="X Profile"
                   >

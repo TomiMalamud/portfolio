@@ -60,7 +60,7 @@ export default async function PostPage({ params }: PostProps) {
       {/* "I'm considering the concept of 'file over app.' Perhaps in the future, I will replace the fancy tags with traditional ones. */}
       {post.tags.length > 0 && (
         <div className="py-4 xl:py-8">
-          <h2 className="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400">
+          <h2 className="text-xs uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
             Built with
           </h2>
           <div className="flex flex-wrap">

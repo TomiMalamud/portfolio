@@ -9,7 +9,7 @@ export function ModeToggle() {
   return (
     <button
       onClick={() => setTheme(nextTheme)}
-      className="relative rounded-md w-8 h-8 flex items-center justify-center p-1.5 hover:bg-gray-200 dark:hover:bg-[#313131] hover:scale-105 transition-all duration-200 group"
+      className="relative rounded-md w-8 h-8 flex items-center justify-center p-1.5 hover:bg-neutral-200 dark:hover:bg-[#313131] hover:scale-105 transition-all duration-200 group"
       aria-label={`Switch to ${nextTheme} mode`}
       title={`Switch to ${nextTheme} mode`}
     >
