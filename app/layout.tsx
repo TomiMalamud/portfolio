@@ -7,31 +7,18 @@ import "./globals.css";
 
 export const metadata = {
   title: "Tomás Malamud",
-  metadataBase: new URL("https://tmalamud.com"),
-  description: "Some things about me.",
+  description: "Software Engineer.",
   openGraph: {
     title: "Tomás Malamud",
-    description: "Some things about me.",
+    description: "Software Engineer.",
     siteName: "Tomás Malamud",
-    images: [
-      {
-        url: "/tomasmalamud.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Tomás Malamud",
-      },
-    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "Tomás Malamud",
-    description: "Some things about me.",
-    images: ["/tomasmalamud.jpg"],
+    description: "Software Engineer.",
     creator: "@tomasmalamud",
-  },
-  icons: {
-    icon: "/favicon.ico",
-  },
+  }
 };
 
 interface RootLayoutProps {
